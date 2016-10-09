@@ -86,6 +86,7 @@
 	<gap:plugin name="cordova-plugin-touch-id" source="npm"/>
 	<gap:plugin name="cordova-plugin-pin-dialog-et" source="npm"/>
 	<gap:plugin name="cordova-plugin-actionsheet" source="npm" />
+	<gap:plugin name="cordova-plugin-cookiemaster" source="npm" />
 	<!--Too hard to paste data <gap:plugin name="cordova-plugin-ios-longpress-fix" source="npm" />-->
 	<gap:plugin name="phonegap-plugin-push" source="npm" version="1.5.3" />
 
