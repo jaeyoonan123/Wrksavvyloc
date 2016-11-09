@@ -61,6 +61,20 @@
 			    };
 
 
+      document.addEventListener("pause", onPause, false);
+         function onPause() {
+             pausedate = new Date();
+         }
+         document.addEventListener("resume", onResume, false);
+         function onResume() {
+             var newhour = 300;
+             if (((new Date) - pausedate) > newhour)
+             {
+                 alert("HEY")
+             }
+         }
+
+
 			    // Handle direct calls like window.open("url","_blank")
 			    window.open = function(url,target,options) {
 			        if ( target == "_top" ) systemOpen(url,options);
