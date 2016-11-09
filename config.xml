@@ -3,9 +3,9 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		xmlns:android="http://schemas.android.com/apk/res/android"
 		id        = "com.mendixcloud.adpinnovation2"
-		version   = "0.0.8" >
+		version   = "1.0.1" >
 
-	<name>Wrksavvy</name>
+	<name>WrksavvyLocal</name>
 
 	<description></description>
 
@@ -86,7 +86,7 @@
 	<gap:plugin name="cordova-plugin-touch-id" source="npm"/>
 	<gap:plugin name="cordova-plugin-pin-dialog-et" source="npm"/>
 	<gap:plugin name="cordova-plugin-actionsheet" source="npm" />
-	
+
 	<!--Too hard to paste data <gap:plugin name="cordova-plugin-ios-longpress-fix" source="npm" />-->
 	<gap:plugin name="phonegap-plugin-push" source="npm" version="1.5.3" />
 
