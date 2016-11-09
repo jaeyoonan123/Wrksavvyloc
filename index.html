@@ -91,10 +91,11 @@
           }
           document.addEventListener("resume", onResume, false);
           function onResume() {
-              var newhour = 300;
+              var newhour = 60000;
               if (((new Date) - pausedate) > newhour)
               {
-                  alert("Hey");
+                  logout();
+                  alert("For your security, you've been automatically logged out due to inactivity");
               }
           }
 					window.openAllLinksWithBlankTargetInSystemBrowser();
