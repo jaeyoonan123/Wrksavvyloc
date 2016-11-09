@@ -61,18 +61,7 @@
 			    };
 
 
-      document.addEventListener("pause", onPause, false);
-         function onPause() {
-             pausedate = new Date();
-         }
-         document.addEventListener("resume", onResume, false);
-         function onResume() {
-             var newhour = 300;
-             if (((new Date) - pausedate) > newhour)
-             {
-                logtout();
-             }
-         }
+
 
 
 			    // Handle direct calls like window.open("url","_blank")
@@ -90,6 +79,18 @@
 			}
 
 			window.startApp = function() {
+        document.addEventListener("pause", onPause, false);
+        function onPause() {
+            pausedate = new Date();
+        }
+        document.addEventListener("resume", onResume, false);
+        function onResume() {
+            var newhour = 300;
+            if (((new Date) - pausedate) > newhour)
+            {
+                alert("HEY");
+            }
+        }
 				document.addEventListener("deviceready", function() {
 					//if the splashscreen plugin exists, show it.
 					//if (navigator && navigator.splashscreen) {
