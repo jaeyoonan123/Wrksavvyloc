@@ -97,8 +97,9 @@
           }
           document.addEventListener("resume", onResume, false);
           function onResume() {
-              var newhour = 30000;
-              if (((new Date) - pausedate) > newhour)
+              newhour = 10000;
+              diffhour = (new Date) - pausedate;
+              if (diffhour > newhour)
               {
 
                   alert("For your security, you've been automatically logged out due to inactivity");
