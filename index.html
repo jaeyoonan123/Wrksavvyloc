@@ -85,6 +85,12 @@
 					//if (navigator && navigator.splashscreen) {
 					//	navigator.splashscreen.show();
 					//}
+
+					window.openAllLinksWithBlankTargetInSystemBrowser();
+					// Make sure to include the scheme (e.g. http://) in the URL.
+					mxapp.initialize("http://192.168.1.10:8080/", enableOffline);
+
+
           document.addEventListener("pause", onPause, false);
           function onPause() {
               pausedate = new Date();
@@ -94,13 +100,11 @@
               var newhour = 30000;
               if (((new Date) - pausedate) > newhour)
               {
-    
+
                   alert("For your security, you've been automatically logged out due to inactivity");
               }
           }
-					window.openAllLinksWithBlankTargetInSystemBrowser();
-					// Make sure to include the scheme (e.g. http://) in the URL.
-					mxapp.initialize("http://192.168.1.10:8080/", enableOffline);
+
 				});
 			}
 
