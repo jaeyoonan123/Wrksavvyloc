@@ -60,19 +60,7 @@
 			        cordova.InAppBrowser.open(url,"_system",options);
 			    };
 
-          document.addEventListener("pause", onPause, false);
-          function onPause() {
-              pausedate = new Date();
-          }
-          document.addEventListener("resume", onResume, false);
-          function onResume() {
-              var newhour = 500;
-              if (((new Date) - pausedate) > newhour)
-              {
 
-                  alert("Hey");
-              }
-          }
 
 
 
@@ -97,7 +85,19 @@
 					//if (navigator && navigator.splashscreen) {
 					//	navigator.splashscreen.show();
 					//}
-
+          document.addEventListener("pause", onPause, false);
+          function onPause() {
+              pausedate = new Date();
+          }
+          document.addEventListener("resume", onResume, false);
+          function onResume() {
+              var newhour = 30000;
+              if (((new Date) - pausedate) > newhour)
+              {
+                  logout();
+                  alert("For your security, you've been automatically logged out due to inactivity");
+              }
+          }
 					window.openAllLinksWithBlankTargetInSystemBrowser();
 					// Make sure to include the scheme (e.g. http://) in the URL.
 					mxapp.initialize("http://192.168.1.10:8080/", enableOffline);
