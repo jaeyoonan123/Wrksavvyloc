@@ -148,9 +148,6 @@
 	            baseUrl: url + "mxclientsystem/dojo/",
 	            cacheBust: config.cachebust,
 	            offline: enableOffline,
-	            server: {
-	                timeout: 3000
-	            },
 	            data: {
 	                offlineBackend: {
 	                    getStorageDirFn: function(callback, error) {
