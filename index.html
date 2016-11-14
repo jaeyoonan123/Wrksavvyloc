@@ -77,6 +77,22 @@
 			        systemOpen($(this).attr('href'));
 			    });
 			}
+      document.addEventListener("pause", onPause, false);
+      function onPause() {
+          pausedate = new Date();
+      }
+      document.addEventListener("resume", onResume, false);
+      function onResume() {
+          newhour = 10000;
+          diffhour = (new Date) - pausedate;
+          if (diffhour > newhour)
+          {
+              mx.logout();
+          
+              alert("For your security, you've been automatically logged out due to inactivity");
+
+          }
+      }
 
 			window.startApp = function() {
 
@@ -85,20 +101,7 @@
 					//if (navigator && navigator.splashscreen) {
 					//	navigator.splashscreen.show();
 					//}
-          document.addEventListener("pause", onPause, false);
-          function onPause() {
-              pausedate = new Date();
-          }
-          document.addEventListener("resume", onResume, false);
-          function onResume() {
-              newhour = 10000;
-              diffhour = (new Date) - pausedate;
-              if (diffhour > newhour)
-              {
-                  alert("For your security, you've been automatically logged out due to inactivity");
-                },10);
-              }
-          }
+
 
 					window.openAllLinksWithBlankTargetInSystemBrowser();
 					// Make sure to include the scheme (e.g. http://) in the URL.
