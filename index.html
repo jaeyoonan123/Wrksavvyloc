@@ -83,13 +83,14 @@
       }
       document.addEventListener("resume", onResume, false);
       function onResume() {
-          var newhour = 2700000;
+          var newhour = 10000;
           var diffhour = (new Date) - pausedate;
           if (diffhour > newhour)
           {
               logout();
-
+              console.log("logout");
               alert("For your security, you've been automatically logged out due to inactivity");
+              console.log("show alert message");
 
           }
       }
