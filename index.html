@@ -85,9 +85,8 @@
       }
       document.addEventListener("resume", onResume, false);
       function onResume() {
-          debugger;
           var newhour = 10000;
-          var diffhour = (new Date) - pausedate;
+          diffhour = (new Date) - pausedate;
           if (diffhour > newhour)
           {
               logout();
