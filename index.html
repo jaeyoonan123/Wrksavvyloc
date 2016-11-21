@@ -107,6 +107,7 @@
               if (diffhour > newhour)
               {
                   setTimeout(function(){
+                    mx.logout();
                     window.localStorage.setItem("IDLETIME",diffhour);
                 },0);
 
