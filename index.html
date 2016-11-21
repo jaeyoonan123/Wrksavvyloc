@@ -106,9 +106,9 @@
               diffhour = (new Date) - pausedate;
               if (diffhour > newhour)
               {
+                  setTimeout(function(){
                   mx.logout();
                   console.log("logout");
-                  setTimeout(function(){
                   alert("For your security, you've been automatically logged out due to inactivity");
                   console.log("show alert message");
                 },0);
