@@ -89,11 +89,32 @@
 					//}
 
 
+
+
+
 					window.openAllLinksWithBlankTargetInSystemBrowser();
 					// Make sure to include the scheme (e.g. http://) in the URL.
 					mxapp.initialize("http://192.168.1.12:8080/", enableOffline);
 
-    
+          document.addEventListener("pause", onPause, false);
+          function onPause() {
+              pausedate = new Date();
+          }
+          document.addEventListener("resume", onResume, false);
+          function onResume() {
+              var newhour = 10000;
+              diffhour = (new Date) - pausedate;
+              if (diffhour > newhour)
+              {
+                  mx.logout();
+                  console.log("logout");
+                  alert("For your security, you've been automatically logged out due to inactivity");
+                  console.log("show alert message");
+
+              }
+          }
+
+
 
 
 
