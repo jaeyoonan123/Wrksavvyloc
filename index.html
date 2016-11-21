@@ -107,10 +107,7 @@
               if (diffhour > newhour)
               {
                   setTimeout(function(){
-                  mx.logout();
-                  console.log("logout");
-                  alert("For your security, you've been automatically logged out due to inactivity");
-                  console.log("show alert message");
+                    window.localStorage.setItem("IDLETIME",diffhour);
                 },0);
 
               }
