@@ -102,13 +102,13 @@
           }
           document.addEventListener("resume", onResume, false);
           function onResume() {
-              var newhour = 2800000;
+              var newhour = 10000;
               diffhour = (new Date) - pausedate;
               if (diffhour > newhour)
               {
                   setTimeout(function(){
                     mx.logout();
-                    window.localStorage.setItem("IDLETIME",diffhour);
+                    navigator.notification.alert("Test",function(){},"Alert","Close");
                 },0);
 
               }
