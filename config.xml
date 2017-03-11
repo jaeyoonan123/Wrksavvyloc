@@ -55,6 +55,7 @@
 
 	<!-- Stop the app from overscrolling and looking all bouncy -->
 	<preference name="DisallowOverscroll" value="true" />
+	<feature name="CDVWKWebViewEngine">      <param name="ios-package" value="CDVWKWebViewEngine" /> </feature>
 
 	<!-- allow assets to be loaded and open links in the app itself, see: http://phonegap.com/blog/2012/03/20/access-tags/ -->
 	<!-- Issue 204079: Allow retrieval of any resource. Custom widgets can point to anything. -->
@@ -87,6 +88,7 @@
 	<gap:plugin name="cordova-plugin-touch-id" source="npm"/>
 	<gap:plugin name="cordova-plugin-pin-dialog-et" source="npm"/>
 	<gap:plugin name="cordova-plugin-actionsheet" source="npm" />
+	<gap:plugin name="cordova-plugin-wkwebview-engine-nextgen" source="npm" version="1.0.1" />
 
 	<!--Too hard to paste data <gap:plugin name="cordova-plugin-ios-longpress-fix" source="npm" />-->
 	<gap:plugin name="phonegap-plugin-push" source="npm" version="1.5.3" />
